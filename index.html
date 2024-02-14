@@ -67,10 +67,20 @@
                     <div class="card-body">
                         <h5 class="card-title">Informe de ventas</h5>
                         <p class="card-text">Este dashboard muestra información detallada sobre las ventas en periodos normales y dias festivos de una tienda norteamericana.</p>
-                        <p class="card-text">Analisis de diferentes indicadores en un panel ordenado por temporada y festividades..</p>
+                        <p class="card-text">Analisis de diferentes indicadores en un panel ordenado por temporada y festividades.</p>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card" onclick="openPowerBiDashboard_3()">
+                    <div class="card-body">
+                        <h5 class="card-title">Seguimiento y estado de pedidos</h5>
+                        <p class="card-text">Este dashboard muestra información detallada los diferentes pedidos por cliente y colegio con sus detalles y kpi respectivos.</p>
+                        <p class="card-text">El informe da cuenta de la fecha de recepcion por el centro logistico, estado de  cada pedido, el colegio de origen, curso, materia, cantidad de oferta por colegio, etc.</p>
+                    </div>
+                </div>
+            </div>
+           
         </div>
         <div id="dashboardModal" class="modal">
             <div class="modal-dialog modal-lg"> <!-- Tamaño grande del modal -->
@@ -106,6 +116,17 @@
                     </div>
                 </div>
             </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card" onclick="openWebsite('https:https://pokedex-react-bazz-six.vercel.app/')">
+                    <div class="card-body">
+                        <h5 class="card-title">Pokedex React</h5>
+                        <p class="card-text">Pokedex minimalista consumiendo la pokeapi con react y js.</p>
+                        <p class="card-text">proyecto utilizando componentes react con la poke api utilizando js y css.</p>
+                    </div>
+                </div>
+            </div>
+
+            
             <!-- Agrega más tarjetas para otros proyectos de desarrollo web si es necesario -->
         </div>
     </div>
@@ -138,6 +159,14 @@
         var iframe = document.getElementById('dashboardFrame');
         iframe.src = "https://app.powerbi.com/view?r=eyJrIjoiZTE2OTdhODUtZDA5Zi00ZGNjLTk5ZmItNDU4MjA5ZWE2ZjAyIiwidCI6Ijc1MTZiYjE4LTI4MmMtNGU2My1iMWVjLTc5NTgwNWYxZThmZCIsImMiOjh9";
     }
+    function openPowerBiDashboard_3() {
+        var modal = document.getElementById('dashboardModal');
+        modal.style.display = 'block';
+        var iframe = document.getElementById('dashboardFrame');
+        iframe.src = "https://app.powerbi.com/view?r=eyJrIjoiMWQ5MWJlZTUtYWIzMC00OGE0LTlkMzgtZTY1YmJkMGU2OTA5IiwidCI6Ijc1MTZiYjE4LTI4MmMtNGU2My1iMWVjLTc5NTgwNWYxZThmZCIsImMiOjh9";
+    }
+
+    
     function closeDashboard() {
         var modal = document.getElementById('dashboardModal');
         modal.style.display = 'none';
