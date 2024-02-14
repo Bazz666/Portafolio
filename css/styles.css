@@ -1,0 +1,164 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+
+@font-face {
+    font-family: "Gameboy";
+    src: url("fonts/gameboy.woff2") format("woff2"),
+        url("fonts/gameboy.woff") format("woff");
+}
+
+body {
+    font-family: "Gameboy", sans-serif;
+    font-size: 14px;
+    background-color: #222;
+    color: #fff;
+}
+
+.container {
+    padding-top: 50px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 16px;
+}
+
+.certifications {
+    margin-top: 50px;
+}
+
+.certifications a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.card {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(to right, #7209b7, #3a0ca3);
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    margin: 20% auto;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+    /* ajusta el alto según sea necesario */
+}
+
+.btn-violet {
+    background-color: #7209b7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-violet:hover {
+    background-color: #3a0ca3;
+}
+
+.tarjeta {
+    background-color: #3a0ca3;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: left;
+    font-family: 'VT323', monospace;
+}
+
+.imagen {
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    width: 150px;
+}
+
+.imagen img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+.contenido {
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-close {
+    background-color: #FF0000;
+}
+
+/* Añade un efecto de "brillo" a los botones */
+
+.btn-close:hover {
+    background-color: #FF8080;
+}

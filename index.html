@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Viewer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="tarjeta">
+        <div class="imagen">
+          <img src="./css/sh.jpg" alt="Tu foto" />
+        </div>
+        <div class="contenido">
+          <h1>Bienvenido a mi portafolio</h1>
+          <p>Soy Sergio Herrera, ingeniero civil industrial apasionado por la tecnología y la innovación.</p>
+          <h2>Experiencia y habilidades</h2>
+          <ul class="habilidades">
+            <li>
+              <i class="fa-solid fa-database"></i>
+              Análisis de datos: Power BI, Tableau
+            </li>
+            <li>
+              <i class="fa-solid fa-flask"></i>
+              Ciencia de datos: ETL con SSIS, PostgreSQL, SQL Server, MySQL
+            </li>
+            <li>
+              <i class="fa-solid fa-code"></i>
+              Programación fullstack:
+              <ul>
+                <li>Backend: Ruby on Rails, Node.js, Express, .NET Framework, .NET Core</li>
+                <li>Frontend: React, Angular</li>
+                <li>Librerías: Bootstrap, Material Design</li>
+              </ul>
+            </li>
+          </ul>
+          <h3>Beneficios de mi perfil híbrido:</h3>
+          <ul class="beneficios">
+            <li><i class="fa-solid fa-eye"></i> Visión integral: Combino análisis de datos, desarrollo web y gestión de bases de datos.</li>
+            <li><i class="fa-solid fa-bolt"></i> Eficiencia: Optimizo procesos y recursos para resultados rápidos.</li>
+            <li><i class="fa-solid fa-lightbulb"></i> Adaptabilidad: Me adapto a nuevas tecnologías y entornos.</li>
+          </ul>
+        </div>
+      </div>
+    
+    <div class="container">
+        <h2 class="text-center">Proyectos de Análisis de Datos en Power BI</h2>
+        <div class="row mt-3">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card" onclick="openPowerBiDashboard_1()">
+                    <div class="card-body">
+                        <h5 class="card-title">Pokedex Dashboard</h5>
+                        <p class="card-text">Este dashboard muestra información detallada sobre los Pokémon utilizando datos de la Poke API.</p>
+                        <p class="card-text">Descripción: La Pokedex es un proyecto de análisis de datos utilizando Power BI. Presenta información detallada sobre los Pokémon y sus características.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Agrega más tarjetas para otros proyectos de Power BI si es necesario -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card" onclick="openPowerBiDashboard_2()">
+                    <div class="card-body">
+                        <h5 class="card-title">Informe de ventas</h5>
+                        <p class="card-text">Este dashboard muestra información detallada sobre las ventas en periodos normales y dias festivos de una tienda norteamericana.</p>
+                        <p class="card-text">Analisis de diferentes indicadores en un panel ordenado por temporada y festividades..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dashboardModal" class="modal">
+            <div class="modal-dialog modal-lg"> <!-- Tamaño grande del modal -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Pokedex Dashboard</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="closeDashboard()"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe id="dashboardFrame" title="Pokedex" width="600" height="373.5" src="" frameborder="0" allowFullScreen="true"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <h2 class="text-center mt-5">Proyectos de Desarrollo Web</h2>
+        <div class="row mt-3">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card" onclick="openWebsite('https://vleepp.com/')">
+                    <div class="card-body">
+                        <h5 class="card-title">Vleep</h5>
+                        <p class="card-text">Vleep es una startup enfocada en capturar datos de bares y pubs de Santiago mediante descuentos y promociones, entregando información del cliente para la toma de decisiones del local.</p>
+                        <p class="card-text">Descripción: Vleep es un proyecto de desarrollo web que ofrece servicios de captura de datos y análisis para bares y pubs de Santiago. Proporciona información valiosa para la toma de decisiones empresariales.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card" onclick="openWebsite('https://codelinechile.com/')">
+                    <div class="card-body">
+                        <h5 class="card-title">Codeline Chile</h5>
+                        <p class="card-text">Codeline Chile es una empresa enfocada en apoyar y asesorar pymes en materia de digitalización, creación de marca y soluciones tecnológicas como CRM, sitios web, análisis de datos, etc.</p>
+                        <p class="card-text">Descripción: Codeline Chile es un proyecto de desarrollo web que ofrece servicios de asesoramiento y soluciones tecnológicas para pymes. Proporciona servicios como CRM, sitios web y análisis de datos para la digitalización de empresas.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Agrega más tarjetas para otros proyectos de desarrollo web si es necesario -->
+        </div>
+    </div>
+    <div class="text-center certifications">
+        <h2>Certificaciones</h2>
+        <a href="https://drive.google.com/drive/folders/your_drive_link">Scrum</a>
+        <a href="https://drive.google.com/drive/folders/your_drive_link">AWS Essentialist</a>
+        <a href="https://drive.google.com/drive/folders/your_drive_link">Herramientas Data Science</a>
+        <a href="https://drive.google.com/drive/folders/your_drive_link">Ruby on Rails</a>
+        <a href="https://drive.google.com/drive/folders/your_drive_link">Fullstack Ruby on Rails</a>
+        <a href="https://drive.google.com/drive/folders/your_drive_link">Gestión de Proyectos</a>
+        <a href="https://drive.google.com/drive/folders/your_drive_link">Wordpress WooCommerce</a>
+    </div>
+</div>
+
+<!-- Bootstrap JS (required) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function openPowerBiDashboard_1() {
+        var modal = document.getElementById('dashboardModal');
+        modal.style.display = 'block';
+        var iframe = document.getElementById('dashboardFrame');
+        iframe.src = "https://app.powerbi.com/view?r=eyJrIjoiNTk3ZGEwMmEtOWEzNy00ZjlhLTljZTMtZjRlMjcwYTA0OGI2IiwidCI6Ijc1MTZiYjE4LTI4MmMtNGU2My1iMWVjLTc5NTgwNWYxZThmZCIsImMiOjh9";
+    }
+
+
+    function openPowerBiDashboard_2() {
+        var modal = document.getElementById('dashboardModal');
+        modal.style.display = 'block';
+        var iframe = document.getElementById('dashboardFrame');
+        iframe.src = "https://app.powerbi.com/view?r=eyJrIjoiZTE2OTdhODUtZDA5Zi00ZGNjLTk5ZmItNDU4MjA5ZWE2ZjAyIiwidCI6Ijc1MTZiYjE4LTI4MmMtNGU2My1iMWVjLTc5NTgwNWYxZThmZCIsImMiOjh9";
+    }
+    function closeDashboard() {
+        var modal = document.getElementById('dashboardModal');
+        modal.style.display = 'none';
+        var iframe = document.getElementById('dashboardFrame');
+        iframe.src = "";
+    }
+
+    function openWebsite(url) {
+        window.open(url, "_blank");
+    }
+</script>
+</body>
+</html>
